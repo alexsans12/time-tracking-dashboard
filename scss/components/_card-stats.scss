@@ -1,0 +1,125 @@
+@use "sass:map";
+
+@mixin card-color($icon, $color, $top: -10px) {
+    background: url($icon) no-repeat top $top right 16px, $color;
+    background-size: 75px;
+    
+    @media screen and (min-width: 800px) {   
+        background-size: 55px;
+    }
+}
+
+.card-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $Dark-blue;
+    border-radius: 15px;
+    color: #fff;
+    margin-top: 60px;
+    padding: 0 25px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 15px;
+        transform: translateY(-35px);
+        z-index: -1;
+    }
+    
+    &__title {
+        font-weight: 400;
+        margin: 25px 0 0;
+        position: relative;
+
+        &::after {
+            content: url('../images/icon-ellipsis.svg');
+            position: absolute;
+            right: 0;
+            transition: 0.5s ease-in;
+        }
+
+        &:hover::after {
+            filter: brightness(2);
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 300;
+        margin-bottom: 15px;
+        
+        &-hour {
+            margin: 0;
+            font-size: 1.6rem;
+        }
+
+        &-previous-hour {
+            color: $Pale-Blue;
+            font-size: 0.9rem;
+        }
+
+        @media screen and (min-width: 800px) {
+            flex-direction: column;
+            align-items: initial;
+            justify-content: space-around;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        margin-top: 40px;
+        min-width: 200px;
+    }
+}
+
+.card-stats__work {
+    margin-top: 40px;
+
+    &::before {
+        @include card-color('../images/icon-work.svg', $Light-orange)
+    }
+
+    @media screen and (min-width: 800px) {
+        margin-top: 40px;
+    }
+}
+
+.card-stats__play {
+    &::before {
+        @include card-color('../images/icon-play.svg', $Soft-blue, -5px)
+    }
+}
+
+.card-stats__study {
+    &::before {
+        @include card-color('../images/icon-study.svg', $Light-red, -5px)
+    }
+}
+
+.card-stats__exercise {
+    &::before {
+        @include card-color('../images/icon-exercise.svg', $Lime-green, -1px)
+    }
+}
+
+.card-stats__social {
+    &::before {
+        @include card-color('../images/icon-social.svg', $Violet, -15px)
+    }
+}
+
+.card-stats__self-care {
+    &::before {
+        @include card-color('../images/icon-self-care.svg', $Soft-orange, -18px);
+        background-size: 65px 75px;
+    }
+}

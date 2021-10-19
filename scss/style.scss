@@ -22,8 +22,17 @@ body {
     display: grid;
     width: 90%;
     max-width: 340px;
-    margin: 0 25px;
+    margin: 5rem 25px;
+
+    @media screen and (min-width: 800px) {
+        & {
+            grid-template-columns: repeat(4, 1fr);
+            min-width: 650px;
+            max-width: 900px;
+            gap: 1.5rem;
+        }
+    }
 }
 
 @import './components/card-profile';
-@import './components/cards-stats';
+@import './components/card-stats';

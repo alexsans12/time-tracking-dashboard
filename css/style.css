@@ -20,7 +20,15 @@ body {
   display: grid;
   width: 90%;
   max-width: 340px;
-  margin: 0 25px;
+  margin: 5rem 25px;
+}
+@media screen and (min-width: 800px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    min-width: 650px;
+    max-width: 900px;
+    gap: 1.5rem;
+  }
 }
 
 .card-profile {
@@ -48,11 +56,28 @@ body {
   font-weight: 300;
   font-size: 1.4rem;
 }
+@media screen and (min-width: 800px) {
+  .card-profile__user-info .user-info__title {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+}
 .card-profile__user-info .user-info__title .user-info__title--small {
   display: block;
   font-size: 0.9rem;
   color: #bdc1ff;
   margin-bottom: 5px;
+}
+@media screen and (min-width: 800px) {
+  .card-profile__user-info .user-info__title .user-info__title--small {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .card-profile__user-info {
+    flex-direction: column;
+    align-items: initial;
+  }
 }
 .card-profile__options {
   display: flex;
@@ -75,6 +100,32 @@ body {
 .card-profile__options .card-profile__option--selected, .card-profile__options .card-profile__option:hover {
   color: #fff;
 }
+@media screen and (min-width: 800px) {
+  .card-profile__options .card-profile__option {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .card-profile__options {
+    padding-top: 35px;
+    min-width: 200px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .card-profile {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .card-profile__user-info {
+    height: 70%;
+  }
+  .card-profile__options {
+    height: 35%;
+    flex-direction: column;
+    align-items: initial;
+  }
+}
 
 .card-stats {
   display: flex;
@@ -83,20 +134,21 @@ body {
   background-color: #1c1f4a;
   border-radius: 15px;
   color: #fff;
-  margin-top: 40px;
+  margin-top: 60px;
   padding: 0 25px;
   position: relative;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
 .card-stats::before {
   content: "";
-  background: url("../images/icon-work.svg") no-repeat top -10px right 15px, #ff8c66;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   border-radius: 15px;
-  transform: translateY(-40px);
+  transform: translateY(-35px);
   z-index: -1;
 }
 .card-stats__title {
@@ -108,6 +160,10 @@ body {
   content: url("../images/icon-ellipsis.svg");
   position: absolute;
   right: 0;
+  transition: 0.5s ease-in;
+}
+.card-stats__title:hover::after {
+  filter: brightness(2);
 }
 .card-stats__info {
   display: flex;
@@ -123,6 +179,88 @@ body {
 .card-stats__info-previous-hour {
   color: #bdc1ff;
   font-size: 0.9rem;
+}
+@media screen and (min-width: 800px) {
+  .card-stats__info {
+    flex-direction: column;
+    align-items: initial;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 800px) {
+  .card-stats {
+    margin-top: 40px;
+    min-width: 200px;
+  }
+}
+
+.card-stats__work {
+  margin-top: 40px;
+}
+.card-stats__work::before {
+  background: url("../images/icon-work.svg") no-repeat top -10px right 16px, #ff8c66;
+  background-size: 75px;
+}
+@media screen and (min-width: 800px) {
+  .card-stats__work::before {
+    background-size: 55px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .card-stats__work {
+    margin-top: 40px;
+  }
+}
+
+.card-stats__play::before {
+  background: url("../images/icon-play.svg") no-repeat top -5px right 16px, #56c2e6;
+  background-size: 75px;
+}
+@media screen and (min-width: 800px) {
+  .card-stats__play::before {
+    background-size: 55px;
+  }
+}
+
+.card-stats__study::before {
+  background: url("../images/icon-study.svg") no-repeat top -5px right 16px, #ff5c7c;
+  background-size: 75px;
+}
+@media screen and (min-width: 800px) {
+  .card-stats__study::before {
+    background-size: 55px;
+  }
+}
+
+.card-stats__exercise::before {
+  background: url("../images/icon-exercise.svg") no-repeat top -1px right 16px, #4acf81;
+  background-size: 75px;
+}
+@media screen and (min-width: 800px) {
+  .card-stats__exercise::before {
+    background-size: 55px;
+  }
+}
+
+.card-stats__social::before {
+  background: url("../images/icon-social.svg") no-repeat top -15px right 16px, #7536d3;
+  background-size: 75px;
+}
+@media screen and (min-width: 800px) {
+  .card-stats__social::before {
+    background-size: 55px;
+  }
+}
+
+.card-stats__self-care::before {
+  background: url("../images/icon-self-care.svg") no-repeat top -18px right 16px, #f1c65b;
+  background-size: 75px;
+  background-size: 65px 75px;
+}
+@media screen and (min-width: 800px) {
+  .card-stats__self-care::before {
+    background-size: 55px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
