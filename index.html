@@ -5,63 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
+    <main class="container">
+        <article class="card-profile">
+            <div class="card-profile__user-info">
+                <img class="user-info__avatar" src="./images/image-jeremy.png" alt="Profile Picture">
+                <h2 class="user-info__title">
+                    <span class="user-info__title--small">Report for</span>
+                    Jeremy Robson
+                </h2>
+            </div>
+            <nav class="card-profile__options">
+                <a href="#" class="card-profile__option">Daily</a>
+                <a href="#" class="card-profile__option card-profile__option--selected">Weekly</a>
+                <a href="#" class="card-profile__option">Monthly</a>
+            </nav>
+        </article>
+        <article class="card-stats">
+            <h3 class="card-stats__title">Work</h3>
+            <div class="card-stats__info">
+                <p class="card-stats__info-hour">32hrs</p>
+                <p class="card-stats__info-previous-hour">Last Week - 36hrs</p>
+            </div>
+        </article>
+    
+    Play
+    1hr <!-- daily -->
+    Previous - 2hrs <!-- daily -->
+    10hrs <!-- weekly -->
+    Previous - 8hrs <!-- weekly -->
+    23hrs <!-- monthly -->
+    Previous - 29hrs <!-- monthly -->
+    
+    Study
+    0hrs <!-- daily -->
+    Previous - 1hr <!-- daily -->
+    4hrs <!-- weekly -->
+    Previous - 7hrs <!-- weekly -->
+    13hrs <!-- monthly -->
+    Previous - 19hrs <!-- monthly -->
+    
+    Exercise
+    1hr <!-- daily -->
+    Previous - 1hr <!-- daily -->
+    4hrs <!-- weekly -->
+    Previous - 5hrs <!-- weekly -->
+    11hrs <!-- monthly -->
+    Previous - 18hrs <!-- monthly -->
+    
+    Social
+    1hr <!-- daily -->
+    Previous - 3hrs <!-- daily -->
+    5hrs <!-- weekly -->
+    Previous - 10hrs <!-- weekly -->
+    21hrs <!-- monthly -->
+    Previous - 23hrs <!-- monthly -->
+    
+    Self Care
+    0hrs <!-- daily -->
+    Previous - 1hr <!-- daily -->
+    2hrs <!-- weekly -->
+    Previous - 2hrs <!-- weekly -->
+    7hrs <!-- monthly -->
+    Previous - 11hrs <!-- monthly -->
+    
+    </main>
 </body>
 </html>

@@ -1,0 +1,55 @@
+.card-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $Dark-blue;
+    border-radius: 15px;
+    color: #fff;
+    margin-top: 40px;
+    padding: 0 25px;
+    position: relative;
+
+    &::before {
+        content: '';
+        background: url('../images/icon-work.svg') no-repeat top -10px right 15px,
+                    $Light-orange;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 15px;
+        transform: translateY(-40px);
+        z-index: -1;
+    }
+
+    &__title {
+        font-weight: 400;
+        margin: 25px 0 0;
+        position: relative;
+
+        &::after {
+            content: url('../images/icon-ellipsis.svg');
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 300;
+        margin-bottom: 15px;
+        
+        &-hour {
+            margin: 0;
+            font-size: 1.6rem;
+        }
+
+        &-previous-hour {
+            color: $Pale-Blue;
+            font-size: 0.9rem;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import './components/variables';
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $text-font;
+    background-color: $Very-dark-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    width: 90%;
+    max-width: 340px;
+    margin: 0 25px;
+}
+
+@import './components/card-profile';
+@import './components/cards-stats';
