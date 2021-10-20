@@ -27,7 +27,7 @@ const monthlyBtn = document.querySelector('#monthly');
         cards.forEach(card => {
             data.forEach(entry => {
                 const { title, 'timeframes': { [id]: hours } } = entry;
-                if(card.id === title) {
+                if(card.getAttribute('name') === title) {
                     card.querySelector('.card-stats__info-hour').textContent = `${hours.current}hrs`;
                     card.querySelector('.card-stats__info-previous-hour').textContent = `Last ${id} - ${hours.previous}hrs`;
                 }
