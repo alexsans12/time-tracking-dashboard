@@ -22,6 +22,10 @@
     cursor: pointer;
     transition: 0.5s ease;
 
+    &:hover {
+        background-color: $Light-blue;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -65,16 +69,18 @@
         &-hour {
             margin: 0;
             font-size: 1.6rem;
-
+            text-transform: capitalize;
+            
             @media screen and (min-width: 800px) {
                 margin-top: 25px;
                 font-size: 3rem;
             }
         }
-
+        
         &-previous-hour {
             color: $Pale-Blue;
             font-size: 0.9rem;
+            text-transform: capitalize;
 
             @media screen and (min-width: 800px) {
                 margin-top: 10px;

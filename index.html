@@ -1,71 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Time tracking dashboard</title>
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <main class="container">
-        <article class="card-profile">
-            <div class="card-profile__user-info">
-                <img class="user-info__avatar" src="./images/image-jeremy.png" alt="Profile Picture">
-                <h2 class="user-info__title">
-                    <span class="user-info__title--small">Report for</span>
-                    Jeremy Robson
-                </h2>
-            </div>
-            <nav class="card-profile__options">
-                <a href="#" class="card-profile__option">Daily</a>
-                <a href="#" class="card-profile__option card-profile__option--selected">Weekly</a>
-                <a href="#" class="card-profile__option">Monthly</a>
-            </nav>
-        </article>
-        <article class="card-stats card-stats__work">
-            <h3 class="card-stats__title">Work <span class="card-stats__title--icon"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></span></h3>
-            <div class="card-stats__info">
-                <p class="card-stats__info-hour">32hrs</p>
-                <p class="card-stats__info-previous-hour">Last Week - 36hrs</p>
-            </div>
-        </article>
-        <article class="card-stats card-stats__play">
-            <h3 class="card-stats__title">Play <span class="card-stats__title--icon"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></span></h3>
-            <div class="card-stats__info">
-                <p class="card-stats__info-hour">10hrs</p>
-                <p class="card-stats__info-previous-hour">Last Week - 8hrs</p>
-            </div>
-        </article>
-        <article class="card-stats card-stats__study">
-            <h3 class="card-stats__title">Study <span class="card-stats__title--icon"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></span></h3>
-            <div class="card-stats__info">
-                <p class="card-stats__info-hour">4hrs</p>
-                <p class="card-stats__info-previous-hour">Last Week - 7hrs</p>
-            </div>
-        </article>
-        <article class="card-stats card-stats__exercise">
-            <h3 class="card-stats__title">Exercise <span class="card-stats__title--icon"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></span></h3>
-            <div class="card-stats__info">
-                <p class="card-stats__info-hour">4hrs</p>
-                <p class="card-stats__info-previous-hour">Last Week - 5hrs</p>
-            </div>
-        </article>
-        <article class="card-stats card-stats__social">
-            <h3 class="card-stats__title">Social <span class="card-stats__title--icon"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></span></h3>
-            <div class="card-stats__info">
-                <p class="card-stats__info-hour">5hrs</p>
-                <p class="card-stats__info-previous-hour">Last Week - 10hrs</p>
-            </div>
-        </article>
-        <article class="card-stats card-stats__self-care">
-            <h3 class="card-stats__title">Self Care <span class="card-stats__title--icon"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></span></h3>
-            <div class="card-stats__info">
-                <p class="card-stats__info-hour">2hrs</p>
-                <p class="card-stats__info-previous-hour">Last Week - 2hrs</p>
-            </div>
-        </article>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <title>Frontend Mentor | Time tracking dashboard</title>
+        <meta name="theme-color" content="#1c1f4a" />
+        <meta property="og:site_name" content="Time Tracking Dashboard" />
+        <meta property="og:title" content="Time Tracking Dashboard" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="https://i.imgur.com/1HawVii.png" />
+        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image:width" content="1440" />
+        <meta property="og:image:height" content="800" />
+        <meta property="og:image:alt" content="Time Tracking Dashboard Website" />
+        <meta
+            property="og:description"
+            content="This a challenge from to Frontend Mentor, It is made with HTML5, SCSS ans JS"
+        />
+        <link rel="stylesheet" href="./css/normalize.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <main class="container">
+            <article class="card-profile">
+                <div class="card-profile__user-info">
+                    <img
+                        class="user-info__avatar"
+                        src="./images/image-jeremy.png"
+                        alt="Profile Picture"
+                    />
+                    <h2 class="user-info__title">
+                        <span class="user-info__title--small">Report for</span>
+                        Jeremy Robson
+                    </h2>
+                </div>
+                <nav class="card-profile__options">
+                    <a href="#" class="card-profile__option" id="daily">Daily</a>
+                    <a href="#" class="card-profile__option card-profile__option--selected" id="weekly" >Weekly</a>
+                    <a href="#" class="card-profile__option" id="monthly">Monthly</a>
+                </nav>
+            </article>
+            <article class="card-stats card-stats__work" id="Work">
+                <h3 class="card-stats__title">
+                    Work
+                    <span class="card-stats__title--icon"
+                        ><img
+                            src="./images/icon-ellipsis.svg"
+                            alt="icon ellipsis"
+                    /></span>
+                </h3>
+                <div class="card-stats__info">
+                    <p class="card-stats__info-hour">32hrs</p>
+                    <p class="card-stats__info-previous-hour">
+                        Last Week - 36hrs
+                    </p>
+                </div>
+            </article>
+            <article class="card-stats card-stats__play" id="Play">
+                <h3 class="card-stats__title">
+                    Play
+                    <span class="card-stats__title--icon"
+                        ><img
+                            src="./images/icon-ellipsis.svg"
+                            alt="icon ellipsis"
+                    /></span>
+                </h3>
+                <div class="card-stats__info">
+                    <p class="card-stats__info-hour">10hrs</p>
+                    <p class="card-stats__info-previous-hour">
+                        Last Week - 8hrs
+                    </p>
+                </div>
+            </article>
+            <article class="card-stats card-stats__study" id="Study">
+                <h3 class="card-stats__title">
+                    Study
+                    <span class="card-stats__title--icon"
+                        ><img
+                            src="./images/icon-ellipsis.svg"
+                            alt="icon ellipsis"
+                    /></span>
+                </h3>
+                <div class="card-stats__info">
+                    <p class="card-stats__info-hour">4hrs</p>
+                    <p class="card-stats__info-previous-hour">
+                        Last Week - 7hrs
+                    </p>
+                </div>
+            </article>
+            <article class="card-stats card-stats__exercise" id="Exercise">
+                <h3 class="card-stats__title">
+                    Exercise
+                    <span class="card-stats__title--icon"
+                        ><img
+                            src="./images/icon-ellipsis.svg"
+                            alt="icon ellipsis"
+                    /></span>
+                </h3>
+                <div class="card-stats__info">
+                    <p class="card-stats__info-hour">4hrs</p>
+                    <p class="card-stats__info-previous-hour">
+                        Last Week - 5hrs
+                    </p>
+                </div>
+            </article>
+            <article class="card-stats card-stats__social" id="Social">
+                <h3 class="card-stats__title">
+                    Social
+                    <span class="card-stats__title--icon"
+                        ><img
+                            src="./images/icon-ellipsis.svg"
+                            alt="icon ellipsis"
+                    /></span>
+                </h3>
+                <div class="card-stats__info">
+                    <p class="card-stats__info-hour">5hrs</p>
+                    <p class="card-stats__info-previous-hour">
+                        Last Week - 10hrs
+                    </p>
+                </div>
+            </article>
+            <article class="card-stats card-stats__self-care" id="Self Care">
+                <h3 class="card-stats__title">
+                    Self Care
+                    <span class="card-stats__title--icon"
+                        ><img
+                            src="./images/icon-ellipsis.svg"
+                            alt="icon ellipsis"
+                    /></span>
+                </h3>
+                <div class="card-stats__info">
+                    <p class="card-stats__info-hour">2hrs</p>
+                    <p class="card-stats__info-previous-hour">
+                        Last Week - 2hrs
+                    </p>
+                </div>
+            </article>
+        </main>
+        <script type="text/javascript" src="./js/app.js"></script>
+    </body>
 </html>

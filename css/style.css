@@ -41,7 +41,7 @@ body {
   align-items: center;
   background-color: #5847eb;
   height: 130px;
-  padding: 0 20px;
+  padding: 0 25px;
   border-radius: 15px;
   position: relative;
   z-index: 2;
@@ -58,7 +58,7 @@ body {
 }
 @media screen and (min-width: 800px) {
   .card-profile__user-info .user-info__title {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     letter-spacing: 1px;
   }
 }
@@ -108,7 +108,7 @@ body {
 }
 @media screen and (min-width: 800px) {
   .card-profile__options {
-    min-width: 210px;
+    min-width: 200px;
   }
 }
 @media screen and (min-width: 800px) {
@@ -138,6 +138,9 @@ body {
   position: relative;
   cursor: pointer;
   transition: 0.5s ease;
+}
+.card-stats:hover {
+  background-color: #2f3779;
 }
 .card-stats::before {
   content: "";
@@ -179,6 +182,7 @@ body {
 .card-stats__info-hour {
   margin: 0;
   font-size: 1.6rem;
+  text-transform: capitalize;
 }
 @media screen and (min-width: 800px) {
   .card-stats__info-hour {
@@ -189,6 +193,7 @@ body {
 .card-stats__info-previous-hour {
   color: #bdc1ff;
   font-size: 0.9rem;
+  text-transform: capitalize;
 }
 @media screen and (min-width: 800px) {
   .card-stats__info-previous-hour {
