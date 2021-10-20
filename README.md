@@ -28,8 +28,8 @@ Users should be able to:
 ![](https://i.imgur.com/1HawVii.png)
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/time-tracking-dashboard-made-with-html-scss-and-js-wqbNisSNE)
+- Live Site URL: [Netlify](https://alexsans-time-tracking-dashboard.netlify.app/)
 
 ## My process
 
