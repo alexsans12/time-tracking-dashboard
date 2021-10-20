@@ -5,7 +5,7 @@
     background-size: 75px;
     
     @media screen and (min-width: 800px) {   
-        background-size: 55px;
+        background-size: 60px;
     }
 }
 
@@ -33,21 +33,25 @@
         transform: translateY(-35px);
         z-index: -1;
     }
-    
+
     &__title {
         font-weight: 400;
         margin: 25px 0 0;
-        position: relative;
+        display: flex;
+        justify-content: space-between;
 
-        &::after {
-            content: url('../images/icon-ellipsis.svg');
-            position: absolute;
-            right: 0;
-            transition: 0.5s ease-in;
+        &--icon {
+            width: 20px;
+            transition: 0.5s;
         }
 
-        &:hover::after {
+        &--icon:hover {
+            -webkit-filter: brightness(2);
             filter: brightness(2);
+        }
+
+        @media screen and (min-width: 800px) {
+            font-size: 1rem;
         }
     }
 
@@ -61,11 +65,21 @@
         &-hour {
             margin: 0;
             font-size: 1.6rem;
+
+            @media screen and (min-width: 800px) {
+                margin-top: 25px;
+                font-size: 3rem;
+            }
         }
 
         &-previous-hour {
             color: $Pale-Blue;
             font-size: 0.9rem;
+
+            @media screen and (min-width: 800px) {
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
         }
 
         @media screen and (min-width: 800px) {
@@ -77,7 +91,7 @@
 
     @media screen and (min-width: 800px) {
         margin-top: 40px;
-        min-width: 200px;
+        min-width: 210px;
     }
 }
 
@@ -113,7 +127,11 @@
 
 .card-stats__social {
     &::before {
-        @include card-color('../images/icon-social.svg', $Violet, -15px)
+        @include card-color('../images/icon-social.svg', $Violet, -15px);
+        
+        @media screen and (min-width: 800px) {
+            @include card-color('../images/icon-social.svg', $Violet, -3px);
+        }
     }
 }
 
@@ -121,5 +139,10 @@
     &::before {
         @include card-color('../images/icon-self-care.svg', $Soft-orange, -18px);
         background-size: 65px 75px;
+        
+        @media screen and (min-width: 800px) {
+            @include card-color('../images/icon-self-care.svg', $Soft-orange, -12px);            
+            background-size: 6px 60px;
+        }
     }
 }

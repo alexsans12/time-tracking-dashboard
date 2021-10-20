@@ -27,8 +27,8 @@ body {
     @media screen and (min-width: 800px) {
         & {
             grid-template-columns: repeat(4, 1fr);
-            min-width: 650px;
-            max-width: 900px;
+            max-width: 1050px;
+            grid-gap: 1.5rem;
             gap: 1.5rem;
         }
     }
