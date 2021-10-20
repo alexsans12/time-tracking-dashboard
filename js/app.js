@@ -30,7 +30,7 @@ const monthlyBtn = document.querySelector('#monthly');
                 if(card.getAttribute('data-category') === title) {
                     card.querySelector('.card-stats__info-hour').textContent = `${hours.current}hrs`;
                     if(id === 'daily')
-                        card.querySelector('.card-stats__info-previous-hour').textContent = `Yesterday ${id} - ${hours.previous}hrs`;
+                        card.querySelector('.card-stats__info-previous-hour').textContent = `Yesterday - ${hours.previous}hrs`;
                     else
                         card.querySelector('.card-stats__info-previous-hour').textContent = `Last ${id} - ${hours.previous}hrs`;
                 }
