@@ -9,9 +9,18 @@ const monthlyBtn = document.querySelector('#monthly');
         fetch(url)
             .then(result => result.json())
             .then(data => {
-                dailyBtn.addEventListener('click', () => fillCards(data, dailyBtn.id));
-                weeklyBtn.addEventListener('click', () => fillCards(data, weeklyBtn.id));
-                monthlyBtn.addEventListener('click', () => fillCards(data, monthlyBtn.id));
+                dailyBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    fillCards(data, dailyBtn.id)
+                });
+                weeklyBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    fillCards(data, weeklyBtn.id)
+                });
+                monthlyBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    fillCards(data, monthlyBtn.id)
+                });
             });
     });
 
