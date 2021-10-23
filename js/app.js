@@ -1,6 +1,5 @@
-const dailyBtn = document.querySelector('#daily');
-const weeklyBtn = document.querySelector('#weekly');
-const monthlyBtn = document.querySelector('#monthly');
+const navOptions = document.querySelector('.card-profile__options');
+const cards = document.querySelectorAll('.card-stats');
 
 (() => {
     document.addEventListener('DOMContentLoaded', ()=> {
@@ -9,30 +8,23 @@ const monthlyBtn = document.querySelector('#monthly');
         fetch(url)
             .then(result => result.json())
             .then(data => {
-                dailyBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    fillCards(data, dailyBtn.id)
-                });
-                weeklyBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    fillCards(data, weeklyBtn.id)
-                });
-                monthlyBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    fillCards(data, monthlyBtn.id)
+                navOptions.addEventListener('click', (evt) => {
+                    evt.preventDefault();
+
+                    if(evt.target.tagName === "A")
+                        fillCards(data, evt.target.id);
                 });
             });
     });
 
     function fillCards(data, id) {
-        document.querySelectorAll('.card-profile__option').forEach(option => {
+        navOptions.querySelectorAll('.card-profile__option').forEach(option => {
             if(option.id === id)
                 option.classList.add('card-profile__option--selected');
             else
                 option.classList.remove('card-profile__option--selected');
         });
 
-        const cards = document.querySelectorAll('.card-stats');
         cards.forEach(card => {
             data.forEach(entry => {
                 const { title, 'timeframes': { [id]: hours } } = entry;
